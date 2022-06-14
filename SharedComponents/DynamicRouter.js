@@ -4,7 +4,8 @@ import Link from 'next/link'
 function GetLink(props) {
    return (
       <div>
-         <Link href=''>
+         <Link href={`/SecondPage?content=${props.title}`}
+            as={props.Disp}>
             <a>{props.title}</a>
          </Link>
       </div>
