@@ -1,8 +1,12 @@
 import React from "react";
+import { useRouter } from "next/router";
 
+const SecondPage = () => {
+   const { query } = useRouter()
 
-export default (props) => (
-   <h1>
-      Welcome to {props.url.query.content};
-   </h1>
-  );
+   return (
+      <h1>Welcome to {query.content}</h1>
+   )
+}
+
+export default SecondPage;
